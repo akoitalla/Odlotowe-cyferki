@@ -16,3 +16,12 @@ C:\Users\Motylek\Desktop\AAA\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj
 C:\Users\Motylek\Desktop\AAA\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.csproj.CoreCompileInputs.cache
 C:\Users\Motylek\Desktop\AAA\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.exe
 C:\Users\Motylek\Desktop\AAA\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.pdb
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\bin\Debug\OdlotoweCyferki.exe
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\bin\Debug\OdlotoweCyferki.pdb
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.csproj.AssemblyReference.cache
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.OdlotoweCyferki.resources
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.Properties.Resources.resources
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.csproj.GenerateResource.cache
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.csproj.CoreCompileInputs.cache
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.exe
+C:\Users\Motylek\Desktop\projekt jpwp tu jest\OdlotoweCyferki\OdlotoweCyferki\OdlotoweCyferki\obj\Debug\OdlotoweCyferki.pdb
