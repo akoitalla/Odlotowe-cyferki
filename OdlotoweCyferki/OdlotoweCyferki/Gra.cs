@@ -10,10 +10,11 @@ namespace OdlotoweCyferki
 {/// <summary>
  /// Klasa umożliwiająca grywalność
  /// </summary>
- /// 
     public partial class OdlotoweCyferki : Form
-    {   
-        
+    {   /// <summary>
+        /// Klasa umożliwiająca grywalność
+        /// </summary>
+
 
         Poziom poziom = new Poziom();
         GenerowanieTablicy tablica = new GenerowanieTablicy();
@@ -46,13 +47,14 @@ namespace OdlotoweCyferki
             Shown +=  (src, args) => gra(grafika, 1);
 
         }
-/// <summary>
-/// Metoda sprawiająca, że:
-/// - wygenerowana tablica porusza się ku górze
-/// - kliknięte przez użytkownika cyfry są podświetlane oraz dodawane do sumy
-/// - wyświetlany jest czas pozostąły do ukończenia poziomu
-/// - użytkownik jest informowany o stanie gry
-/// </summary>
+
+        /// <summary>
+        /// Sprawia, że:
+        /// 1) wygenerowana tablica porusza się ku górze
+        /// 2) kliknięte przez użytkownika cyfry są podświetlane oraz dodawane do sumy
+        /// 3) wyświetlany jest czas pozostąły do ukończenia poziomu
+        /// 4) użytkownik jest informowany o stanie gry
+        /// </summary>
         /// <param name="grafika">Utworzony obiekt grafika, który jest bitmapą </param>
         /// <param name="poziom">Poziom gry</param>
         private void gra(Graphics grafika, int poziom)
@@ -67,12 +69,16 @@ namespace OdlotoweCyferki
             var CZESTOTLIWOSC_ODSWIEZANIA_MS    = 10;
 
 
-            (int czas, int liczba, int suma, int min_liczba, int max_liczba) = this.poziom.getPoziom(poziom);
+            (int czas, int liczba, int suma, int min_liczba, int max_liczba) = this.poziom.getPoziom(poziom);;
 
+            if (poziom == 1 || poziom == 2 || poziom == 3 || poziom == 4 || poziom == 5)
+            {
+                MessageBox.Show($"Przygotuj się do poziomu {poziom}\n\n Powodzenia!", "Odlotowe Cyferki");
+            }
 
-            MessageBox.Show($"Przygotuj się do poziomu {poziom}\n\n Powodzenia!", "Odlotowe Cyferki");
-
-       
+            /// <summary>
+            /// Tablica liczb
+            /// </summary>
             var liczby = tablica.generujTablice(min_liczba, max_liczba, ILOSC_LICZB, SZEROKOSC_OBIEKTU, WYSOKOSC_OBIEKTU);
 
             var blokada = new object();
@@ -104,8 +110,10 @@ namespace OdlotoweCyferki
                         else czas--;
                 }
             });
-         
-            // Sprawienie, żeby liczby poruszały się w górę
+
+            ///<summary>
+            ///Sprawienie, żeby liczby poruszały się w górę
+            ///</summary>
             var watek = Task.Run(async () =>
             {
                 System.Drawing.Font czcionka = new System.Drawing.Font("Arial", 14.0f, System.Drawing.FontStyle.Bold);
@@ -139,15 +147,22 @@ namespace OdlotoweCyferki
             {
                 await watek;
 
-                if (czas == 0)
+               
+                if (poziom == 6)
                 {
-                    MessageBox.Show("Niestety, koniec czasu. Spróbuj jeszcze raz!", "Odlotowe Cyferki");
+                    MessageBox.Show($"Ukończyłeś gre z poziomem {poziom - 1} :)\n\nMożesz rozpocząć grę ponownie klikając przycisk 'jeszcze raz'' ", "Liczby");
+                   
                 }
                 else if (liczba == suma)
                 {
                     MessageBox.Show($"Gratulacje!\n\nUkończyłeś poziom {poziom}", "Odlotowe Cyferki");
                     gra(grafika, ++poziom);
                 }
+                else if (czas == 0)
+                {
+                    MessageBox.Show("Niestety, koniec czasu. Spróbuj jeszcze raz!", "Odlotowe Cyferki");
+                }
+
             });
             Invoke(new Action(() =>
             {

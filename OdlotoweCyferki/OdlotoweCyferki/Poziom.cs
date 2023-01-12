@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OdlotoweCyferki
 {   /// <summary>
 /// Klasa przypisująca parametry dla poziomu
 /// </summary>
     public class Poziom
-    {
+    {   /// <summary>
+        /// Klasa przypisująca parametry dla poziomu
+        /// </summary>
+
         /// <summary>
         /// Metoda zwracająca parametry przydzielone poszczególnym poziomom
         /// </summary>
@@ -36,8 +40,8 @@ namespace OdlotoweCyferki
                 case 1:
                     czas = 40;
                     min_liczba = 0;
-                    max_liczba = 10;
-                    liczba = generator.Next(14, 28);
+                    max_liczba = 9;
+                    liczba = generator.Next(14, 99);
                     suma = 0; break;
                 case 2:
                     czas = 30;
@@ -48,25 +52,26 @@ namespace OdlotoweCyferki
 
                 case 3:
                     czas = 40;
-                    min_liczba = -10;
-                    max_liczba = 10;
+                    min_liczba = -9;
+                    max_liczba = 9;
                     liczba = generator.Next(-35, 35);
                     suma = 0; break;
 
                 case 4:
                     czas = 35;
-                    min_liczba = -10;
-                    max_liczba = 10;
-                    liczba = generator.Next(-30, 30);
+                    min_liczba = -9;
+                    max_liczba = 9;
+                    liczba = generator.Next(-40, 40);
                     suma = 0; break;
 
                 case 5:
                     czas = 40;
-                    min_liczba = -10;
-                    max_liczba = 10;
-                    liczba = generator.Next(-45, 99);
+                    min_liczba = -9;
+                    max_liczba = 9;
+                    liczba = generator.Next(-45, 50);
                     suma = 0; break;
 
+               
             }
             
             return Tuple.Create(czas,  liczba,  suma,  min_liczba,  max_liczba);
